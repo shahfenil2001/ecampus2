@@ -1,0 +1,80 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Stock Signup Form Responsive Widget Template :: W3layouts</title>
+		<!-- Meta tags -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- //Meta tags -->
+    <link rel="stylesheet" href="{% static 'signup/parent/css/style.css' %}" type="text/css" media="all" /><!-- Style-CSS -->
+    <link href="{% static 'signup/parent/css/font-awesome.css' %}" rel="stylesheet"><!-- font-awesome-icons -->
+</head>
+
+<body>
+	<section class="w3l-form-36">
+		<div class="form-36-mian section-gap">
+			<div class="wrapper">
+				<div class="form-inner-cont">
+					<h3>Create your account</h3>
+					<form action="#" method="post" class="signin-form">
+						{% csrf_token %}
+						<div class="form-input">
+							<span class="fa fa-user-o" aria-hidden="true"></span> <input type="text" name="email" placeholder="Username" required />
+						</div>
+						<div class="form-input">
+							{% render_field form.email class="form-control" placeholder="abc@gmail.com" type="text" %}
+							<span class="fa fa-envelope-o" aria-hidden="true"></span> <input type="email" name="email" placeholder="Email" required />
+						</div>
+						<div class="form-input">
+							<span class="fa fa-key" aria-hidden="true"></span><input type="password" name="password" placeholder="Password"
+								required />
+						</div>
+						<div class="form-input">
+							<span class="fa fa-key" aria-hidden="true"></span> <input type="password" name="password" placeholder="Confirm Password"
+								required />
+						</div>
+						
+						<div class="login-remember d-grid">
+							<label class="check-remaind">
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								<p class="remember">Remember me</p>
+							</label>
+							<button class="btn theme-button" type="submit">Signup</button>
+						</div>
+					</form>
+					<div class="social-icons">
+						<p class="continue"><span>Or</span></p>
+						<div class="social-login">
+						<a href="#facebook">
+							<div class="facebook">
+								<span class="fa fa-facebook" aria-hidden="true"></span>
+								
+							</div>
+						</a>
+						<a href="#google">
+							<div class="google">
+								<span class="fa fa-google-plus" aria-hidden="true"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+					<p class="signup">Already a member? <a href="login.html" class="signuplink">Login</a></p>
+				</div>
+
+				<!-- copyright -->
+				<div class="copy-right">
+					<p>COPYRIGHT © 2022 FENIL SHAH. All rights reserved | Design by <a href="#"
+							target="_blank">Fenil</a></p>
+				</div>
+				<!-- //copyright -->
+			</div>
+		</div>
+	</section>
+</body>
+</html>
